@@ -9,49 +9,58 @@
 
 
 <style>
+  :root {
+	  --main-bg-color: #252839;
+	  --alt-bg-color: #25392C;
+	  --main-text-color: #677077;
+	  --main-hl-color: #b5b5b7;
+	  --alt-hl-color: #f2b632;
+  }
+
   body {
-    background-color:#CCCCDE; 
+    background-color: var(--alt-bg-color); 
   }
   .title {
     top: 90px;
     font-size:70px;
-    color: #003;
+    color: var(--main-hl-color);
   }
   .center {
     text-align: center;
   }
   .header {
-    background-color: #CCCCDE;
+    background-color: var(--alt-h1-color);
     text-align:center;
-    color: #DDD;
+    color: var(--main-text-color);
     height: 200px;
   }
   #menu-bar {
-    
+    color: var(--main-text-color);
   }
   #current-projects {
     padding:"30px";
     margin:"30px";
   }
   .current-pic {
-    border: 5px solid #DDE;
+    border: 3px solid var(--main-hl-color);
     width: 900px;
     display: block;
     margin: 0 auto;
   }
   #contact {
-    background-color: #BBC;
+    background-color: var(--main-hl-color);
     background-size: cover;
     background-position: center right;
     height:500px;
   }
   #contact h3{
     font-size:72px;
-    color:#003;
+    color: var(--main-hl-color);;
     position: relative;
     top: 75px;
     left: 75px;
   }
+  <!--not in use-->
   #email {
     font-size:25px;
     color: grey;
@@ -86,27 +95,28 @@
   .header li {
     display: inline-block;
     left: 20px;
-    color: #EEEEF;
+    color: var(--main-text-color);
     font-size: 28px;
     letter-spacing: 2px;
     padding: 12px;
 }
   a {
     link-decoration: none;
+	color: var(--main-text-color);
   }
   #nau {
     position: relative;
     top: 25%;
   }
   #desc {
-    color:#003; 
-    font-size:14px"
+    color: var(--main-text-color); 
+    font-size:18px
   }
   #film {
     padding-top: 20px;
   }
   .border {
-    border: 5px solid #DDE;
+    border: 3px solid #1d2120;
   }
   /* Style all font awesome icons */
 .fa {
@@ -128,33 +138,55 @@
 /* Facebook */
 .fa-facebook {
     
-    color: white;
+    color: var(--main-text-color);
 }
 
 /* Twitter */
 .fa-twitter {
     
-    color: white;
+    color: var(--main-text-color);
 }
   .fa-instagram {
-    color: white;
+    color: var(--main-text-color);
   }
   h2 {
-    color: #003
+    color: var(--main-text-color)
   }
   h3 {
-    color: #003
+    color: var(--main-text-color)
   }
   h4 {
-    color: #003
+    color: var(--main-text-color)
   }
   h5 {
-    color: #003
+    color: var(--main-text-color)
   }
   #txtbox {
      height:150px;
-     width:420px;
+	 width: 80%;
+     padding: 12px 20px;
+     margin: 8px 0;
+     box-sizing: border-box;
+}
     }
+	.navlink {
+		color: var(--main-hl-color);
+	}
+	.navlink:hover {
+        box-shadow: 0 0 0 3px var(--main-hl-color);
+	}
+	input[type=text] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	}
+	input[type=email] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+	}
 </style>
   
 <body>
@@ -163,14 +195,14 @@
   <h3 class="center" id=desc>Filmmaker and Front-End Developer</h3>
     <nav id=menu-bar>
       <ul>
-        <li><a href="#top" style="color:white">HOME</a></li>
-        <li><a href="#film" style="color:white">FILM</a></li>
-        <li><a href="#web" style="color:white">WEB</a></li>
-        <li><a href="#contact" style="color:white">CONTACT</a></li>
+        <li><a href="#top" class="navlink grow">HOME</a></li>
+        <li><a href="#film" class="navlink grow">FILM</a></li>
+        <li><a href="#web" class="navlink grow">WEB</a></li>
+        <li><a href="#contact" class="navlink grow">CONTACT</a></li>
       </ul>
     </nav>
   </div>
-  <div style="background-color:#EEF">
+  <div style="background-color:var(--main-bg-color">
   <h2 class="center" style="font-size:50px"  id="film">FILM</h2>
   <h3 class="center" style="font-size:30px">CURRENT PROJECTS</h3>
   <div id=current-projects style="text-align:center">
@@ -201,7 +233,7 @@
   <hr>
   <hr>
   </div>
-  <div style="background-color:#CCD">
+  <div style="background-color:var(--main-bg-color)">
   <h2 class="center" id="web" style="font-size:50px">Web</h3>
   <div class=web-logos>
     <div class=card>
@@ -214,12 +246,12 @@
   <p style="text-align:center">I've built websites for institutions like the Northern Arizona University Marketing Department and the University of Arizona Cancer Center.
   </div>
   <div id=contact>
-    <h3>Contact me</h3>
+    <h3 style="color:var(--main-bg-color)">Contact me</h3>
     <div style="padding-top:75px;padding-left:75px">
       <form>
         <input type="text" name="name" placeholder="Name"><br>
         <input type="email" name="usremail" placeholder="Email address"><br>
-        <input type="text" name="message" placeholder="Message" id="txtbox"><br>
+        <textarea name="message" placeholder="Message" id="txtbox"></textarea><br>
         <input type="submit">
       </form>
     </div>
